@@ -1,13 +1,18 @@
 import HomeBanner from "../components/HomeBanner";
 import Navbar from "../components/Navbar";
-import Card from "../components/Card";
+import Cards from "../components/Cards";
+
+import requests from "../consts/requests";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-secondary">
+    <div className="h-full min-h-screen bg-secondary">
       <Navbar />
       <HomeBanner />
-      <Card />
+      <div className="flex flex-col gap-12">
+        <Cards request={requests.topAlbums} />
+        <Cards request={requests.newAlbums} />
+      </div>
     </div>
   );
 }
