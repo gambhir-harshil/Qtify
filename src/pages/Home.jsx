@@ -1,6 +1,6 @@
 import HomeBanner from "../components/HomeBanner";
 import Navbar from "../components/Navbar";
-import Card from "../components/card";
+import Card from "../components/Card";
 
 export default function Home() {
   return (
