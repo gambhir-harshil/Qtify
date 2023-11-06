@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 
 export default function Navbar() {
   return (
-    <div className="w-full bg-primary text-lg flex justify-between px-8 py-4">
+    <div className="flex justify-between w-full px-8 py-5 text-lg bg-primary">
       <Logo />
       <SearchBar />
       <Button />

@@ -1,9 +1,8 @@
-import { KeyboardArrowDown } from "@mui/icons-material";
 import CustomAccordion from "./CustomAccordion";
 
 export default function Faqs() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 px-80">
       <h1 className="text-3xl font-bold text-center text-white">FAQs</h1>
       <CustomAccordion
         summary={"Is QTify free to use?"}

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation } from "swiper/modules";
 import useAxios from "../hooks/useAxios";
@@ -22,7 +22,7 @@ export default function Carousel({ url }) {
   return (
     <Swiper
       className="w-full"
-      spaceBetween={32}
+      spaceBetween={36}
       slidesPerView={"auto"}
       initialSlide={0}
       modules={{ Navigation }}
