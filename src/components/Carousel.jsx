@@ -6,7 +6,7 @@ import useAxios from "../hooks/useAxios";
 import Card from "./Card";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
-export default function Carousel({ url }) {
+export default function Carousel({ url, songs }) {
   const [albums, setAlbums] = useState([]);
 
   const { response } = useAxios(url);
@@ -14,10 +14,14 @@ export default function Carousel({ url }) {
   const swiperRef = useRef();
 
   useEffect(() => {
-    if (response) {
-      setAlbums(response);
+    if (!songs?.length) {
+      if (response) {
+        setAlbums(response);
+      }
+    } else {
+      setAlbums(songs);
     }
-  }, [response]);
+  }, [response, songs]);
 
   return (
     <Swiper

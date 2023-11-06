@@ -23,7 +23,7 @@ export default function MusicControls() {
         <div className="flex flex-col">
           <span className="font-medium text-white">{randomSong.title}</span>
           {randomSong.artists?.slice(0, 2).map((artist, idx) => (
-            <span className="text-sm font-light text-gray-400" key={idx}>
+            <span className="text-xs font-semibold text-gray-400" key={idx}>
               {artist}
               {idx < randomSong.artists?.length - 1 && ", "}
             </span>

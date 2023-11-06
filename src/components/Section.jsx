@@ -9,7 +9,7 @@ export default function Section({ request }) {
     setToggle(!toggle);
   }
   return (
-    <div className="relative flex flex-col gap-4 px-8">
+    <div className="relative z-0 flex flex-col gap-4 px-8">
       <div className="flex justify-between">
         <h1 className="text-lg font-semibold text-white">{request.name}</h1>
         <button
