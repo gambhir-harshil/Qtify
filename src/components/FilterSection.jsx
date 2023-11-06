@@ -40,7 +40,7 @@ export default function FilterSection() {
           />
         ))}
       </Tabs>
-      <Carousel url={"/songs"} />
+      <Carousel url={"/albums"} />
     </div>
   );
 }

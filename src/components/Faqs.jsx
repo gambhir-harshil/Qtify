@@ -10,7 +10,7 @@ export default function Faqs() {
         details={"Yes! it is 100% free, and has 0% ads!"}
       />
       <CustomAccordion
-        summary={"Can I download andn listen to songs offline?"}
+        summary={"Can I download and listen to songs offline?"}
         details={
           "Sorry, unfortunately we don't provide the service to download any songs."
         }
