@@ -1,9 +1,9 @@
-import { PlaylistAdd, Shuffle } from "@mui/icons-material";
+import { ArrowBack, PlaylistAdd, Shuffle } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 export default function AlbumBanner({ album }) {
-  console.log(album);
   return (
-    <div className="h-[36rem] flex py-24 px-16 gap-12 items-center">
+    <div className="relative h-[32rem] flex py-24 gap-12 items-center">
       <div className="overflow-hidden bg-cover rounded-lg w-72 h-80">
         <img src={album.image} alt={album.title} />
       </div>
@@ -13,7 +13,7 @@ export default function AlbumBanner({ album }) {
           <p className="max-w-xl">{album.description}</p>
           <span className="font-semibold">
             {album.songs.length} songs{" "}
-            <span className="mx-2 text-gray-400">•</span> {album.follows}
+            <span className="mx-2 text-gray-400">• </span> {album.follows}{" "}
             follows
           </span>
           <div className="flex gap-6">
@@ -26,6 +26,12 @@ export default function AlbumBanner({ album }) {
           </div>
         </div>
       </div>
+      <Link
+        to={"/"}
+        className="absolute flex items-center justify-center w-12 h-12 text-white rounded-full top-6 bg-primary"
+      >
+        <ArrowBack fontSize="large" />
+      </Link>
     </div>
   );
 }
