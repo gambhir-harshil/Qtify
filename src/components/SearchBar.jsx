@@ -40,6 +40,10 @@ export default function SearchBar() {
     closeMenu();
   }, [input]);
 
+  function handleClose() {
+    setInput("");
+  }
+
   return (
     <div className="relative flex items-center justify-center w-1/2">
       <form className="relative w-1/2">
@@ -57,7 +61,9 @@ export default function SearchBar() {
           <Search />
         </button>
       </form>
-      {filteredAlbums !== null && <Menu albums={filteredAlbums} />}
+      {filteredAlbums !== null && (
+        <Menu albums={filteredAlbums} onClose={handleClose} />
+      )}
     </div>
   );
 }

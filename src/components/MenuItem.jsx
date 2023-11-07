@@ -1,7 +1,9 @@
-export default function MenuItem({ album }) {
+import { Link } from "react-router-dom";
+
+export default function MenuItem({ album, onClose }) {
   console.log(album);
   return (
-    <>
+    <Link to={`/album/${album?.slug}`} state={{ album }} onClick={onClose}>
       <div className="flex items-center justify-between">
         <div className="w-16 h-20 overflow-hidden bg-cover rounded-xl">
           <img src={album.image} alt={album.title} />
@@ -14,6 +16,6 @@ export default function MenuItem({ album }) {
         </span>
       </div>
       <hr className="border-t border-primary" />
-    </>
+    </Link>
   );
 }
